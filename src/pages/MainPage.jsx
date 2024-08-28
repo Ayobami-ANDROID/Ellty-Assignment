@@ -41,7 +41,7 @@ const MainPage = () => {
 
   return (
     <div className='flex flex-col items-center'>
-      <div className='shadow-[0_8px_15px_0px_rgba(20,20,20,0.12),0_0_4px_0px_rgba(20,20,20,0.1)] rounded-[8px] bg-[#fff] md:w-[400px] w-[300px] mt-32 p-6'>
+      <div className='shadow-[0_8px_15px_0px_rgba(20,20,20,0.12),0_0_4px_0px_rgba(20,20,20,0.1)] rounded-[8px] bg-[#fff] md:w-[400px] w-[300px] mt-24 p-6'>
         <div className='border-b-2 border-[#CDCDCD] pb-4'>
           <CheckBox 
             title='All Pages'
