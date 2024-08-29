@@ -4,7 +4,7 @@ const CheckBox = ({ title, checked, onChange }) => {
   return (
     <div className="relative">
       <div className="flex justify-between items-center">
-        <label className="text-[#1F2128] font-montserrat font-[400] text-[16px]">{title}</label>
+        <label className="text-[#1F2128] font-montserrat font-[400] text-[14px] font-text">{title}</label>
         <div className="relative">
           <input
             type="checkbox"

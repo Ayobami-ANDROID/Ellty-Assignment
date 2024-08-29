@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { toast} from 'react-toastify';
 import CheckBox from '../components/CheckBox';
 import Button from '../components/Button';
 
@@ -39,9 +40,24 @@ const MainPage = () => {
     }
   };
 
+  const handleButtonClick = () => {
+    const selectedPages = Object.entries(checkboxes)
+      .filter(([key, value]) => key !== 'allPages' && value)
+      .map(([key]) => key.charAt(0).toUpperCase() + key.slice(1))
+      .join(', ');
+
+    if (checkboxes.allPages) {
+      toast.success('All Pages clicked!');
+    } else if (selectedPages) {
+      toast.success(`Selected pages: ${selectedPages}`);
+    } else {
+      toast.info('No pages selected');
+    }
+  };
+
   return (
     <div className='flex flex-col items-center'>
-      <div className='shadow-[0_8px_15px_0px_rgba(20,20,20,0.12),0_0_4px_0px_rgba(20,20,20,0.1)] rounded-[8px] bg-[#fff] md:w-[370px] w-[300px]  mt-24 p-6'>
+      <div className='shadow-[0_8px_15px_0px_rgba(20,20,20,0.12),0_0_4px_0px_rgba(20,20,20,0.1)] rounded-[8px] bg-[#fff] md:w-[370px] w-[300px] mt-24 p-6'>
         <div className='border-b-[0.7px] border-[#CDCDCD] pb-4'>
           <CheckBox 
             title='All Pages'
@@ -62,7 +78,7 @@ const MainPage = () => {
         </div>
 
         <div className='mt-4'>
-          <Button />
+          <Button onClick={handleButtonClick} />
         </div>
       </div>
     </div>
