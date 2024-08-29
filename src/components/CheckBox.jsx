@@ -21,11 +21,11 @@ const CheckBox = ({ title, checked, onChange }) => {
               appearance-none border-2 h-[23px] w-[23px] rounded-[6px]
               transition-all duration-200 ease-in-out
               ${checked
-                                ? 'bg-[#2469F6] border-0 hover:bg-[#5087F8]'
-                                : 'border-[#CDCDCD] hover:border-[#BDBDBD] hover:bg-white'
+                                ? 'bg-[#2469F6] border-0 hover:bg-[#5087F8] h-[23px] w-[23px]'
+                                : 'border-[#CDCDCD] hover:border-[#BDBDBD] hover:bg-white h-[23px] w-[23px]'
                             }
-              ${isPressed && checked ? 'ring-2 ring-blue-200 bg-[#2469F6]' : ''}
-              ${isPressed && !checked ? 'bg-white border-[#BDBDBD]' : ''}
+              ${isPressed && checked ? 'ring-2 ring-blue-200 bg-[#2469F6] h-[23px] w-[23px]' : ''}
+              ${isPressed && !checked ? 'bg-white border-[#BDBDBD] h-[23px] w-[23px]' : ''}
               focus:outline-none
             `}
                     />
