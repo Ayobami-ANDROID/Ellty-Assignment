@@ -24,7 +24,7 @@ const CheckBox = ({ title, checked, onChange }) => {
                                 ? 'bg-[#2469F6] border-0 hover:bg-[#5087F8] h-[23px] w-[23px]'
                                 : 'border-[#CDCDCD] hover:border-[#BDBDBD] hover:bg-white h-[23px] w-[23px]'
                             }
-              ${isPressed && checked ? 'ring-2 ring-blue-200 bg-[#2469F6] h-[23px] w-[23px]' : ''}
+              ${isPressed && checked ? 'ring-2 ring-blue-200 bg-[#2469F6] h-[23px] w-[23px] border-0' : ''}
               ${isPressed && !checked ? 'bg-white border-[#BDBDBD] h-[23px] w-[23px]' : ''}
               focus:outline-none
             `}
